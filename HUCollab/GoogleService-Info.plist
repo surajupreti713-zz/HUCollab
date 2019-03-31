@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1076690250745-m0d7jgokkvqpmrkngnhg5m8oj1a127lr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1076690250745-m0d7jgokkvqpmrkngnhg5m8oj1a127lr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBzgF6EmuStF8LTFD1m5wPlH7fLfIcwPM0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1076690250745</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>SU.HUCollab</string>
+	<key>PROJECT_ID</key>
+	<string>hucollab-cea2f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hucollab-cea2f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1076690250745:ios:9f2e8b4df7a7f3ee</string>
+	<key>DATABASE_URL</key>
+	<string>https://hucollab-cea2f.firebaseio.com</string>
+</dict>
+</plist>
