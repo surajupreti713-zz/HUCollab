@@ -21,6 +21,8 @@
 		6118ABBA224D711A002EA34C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6118ABB9224D711A002EA34C /* SignUpViewController.swift */; };
 		6118ABBC224E470D002EA34C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6118ABBB224E470D002EA34C /* StartViewController.swift */; };
 		6118ABBE224E477C002EA34C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6118ABBD224E477C002EA34C /* HomeViewController.swift */; };
+		6175A0A3225178FD0008F1F7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6175A0A2225178FD0008F1F7 /* MenuViewController.swift */; };
+		6175A0A7225226780008F1F7 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6175A0A6225226780008F1F7 /* SlideInTransition.swift */; };
 		68C7BDB201652FA01B9109D6 /* Pods_HUCollabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8974210F63681CD0392717 /* Pods_HUCollabTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		6118ABB9224D711A002EA34C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6118ABBB224E470D002EA34C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		6118ABBD224E477C002EA34C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6175A0A2225178FD0008F1F7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6175A0A6225226780008F1F7 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		8DB83A74D3150390279B0BBE /* Pods-HUCollab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUCollab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HUCollab/Pods-HUCollab.debug.xcconfig"; sourceTree = "<group>"; };
 		B1CF7260F574E5AF5877A591 /* Pods_HUCollab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HUCollab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF5D4E4CFCB6B0B968BC300 /* Pods-HUCollab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUCollab.release.xcconfig"; path = "Pods/Target Support Files/Pods-HUCollab/Pods-HUCollab.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				6118ABB9224D711A002EA34C /* SignUpViewController.swift */,
 				6118ABBB224E470D002EA34C /* StartViewController.swift */,
 				6118ABBD224E477C002EA34C /* HomeViewController.swift */,
+				6175A0A2225178FD0008F1F7 /* MenuViewController.swift */,
+				6175A0A6225226780008F1F7 /* SlideInTransition.swift */,
 			);
 			path = HUCollab;
 			sourceTree = "<group>";
@@ -398,7 +404,9 @@
 				6118ABBC224E470D002EA34C /* StartViewController.swift in Sources */,
 				6118ABB8224D70FC002EA34C /* LoginViewController.swift in Sources */,
 				6118AB8A224D6118002EA34C /* ViewController.swift in Sources */,
+				6175A0A3225178FD0008F1F7 /* MenuViewController.swift in Sources */,
 				6118ABBA224D711A002EA34C /* SignUpViewController.swift in Sources */,
+				6175A0A7225226780008F1F7 /* SlideInTransition.swift in Sources */,
 				6118AB88224D6118002EA34C /* AppDelegate.swift in Sources */,
 				6118ABBE224E477C002EA34C /* HomeViewController.swift in Sources */,
 			);
