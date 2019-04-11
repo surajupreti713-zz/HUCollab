@@ -8,7 +8,8 @@ target 'HUCollab' do
   # Pods for HUCollab
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
   target 'HUCollabTests' do
     inherit! :search_paths
