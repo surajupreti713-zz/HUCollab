@@ -24,6 +24,8 @@
 		6175A0A3225178FD0008F1F7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6175A0A2225178FD0008F1F7 /* MenuViewController.swift */; };
 		6175A0A7225226780008F1F7 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6175A0A6225226780008F1F7 /* SlideInTransition.swift */; };
 		6175A0A9225272390008F1F7 /* CreateThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6175A0A8225272390008F1F7 /* CreateThreadViewController.swift */; };
+		61C532EB22613B03003F2818 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C532EA22613B03003F2818 /* PostCell.swift */; };
+		61C532ED2261419A003F2818 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C532EC2261419A003F2818 /* Post.swift */; };
 		61C69592225E65C600302002 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C69591225E65C600302002 /* Thread.swift */; };
 		61C69594225F82A200302002 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C69593225F82A200302002 /* ThreadViewController.swift */; };
 		61C695BA2260BC8C00302002 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C695B92260BC8C00302002 /* PopupViewController.swift */; };
@@ -73,6 +75,8 @@
 		6175A0A2225178FD0008F1F7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		6175A0A6225226780008F1F7 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		6175A0A8225272390008F1F7 /* CreateThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadViewController.swift; sourceTree = "<group>"; };
+		61C532EA22613B03003F2818 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		61C532EC2261419A003F2818 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		61C69591225E65C600302002 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		61C69593225F82A200302002 /* ThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
 		61C695B92260BC8C00302002 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				61C69591225E65C600302002 /* Thread.swift */,
+				61C532EA22613B03003F2818 /* PostCell.swift */,
+				61C532EC2261419A003F2818 /* Post.swift */,
 			);
 			path = modal;
 			sourceTree = "<group>";
@@ -441,8 +447,10 @@
 			files = (
 				6118ABBC224E470D002EA34C /* StartViewController.swift in Sources */,
 				61C69592225E65C600302002 /* Thread.swift in Sources */,
+				61C532EB22613B03003F2818 /* PostCell.swift in Sources */,
 				6118ABB8224D70FC002EA34C /* LoginViewController.swift in Sources */,
 				6118AB8A224D6118002EA34C /* ViewController.swift in Sources */,
+				61C532ED2261419A003F2818 /* Post.swift in Sources */,
 				6175A0A3225178FD0008F1F7 /* MenuViewController.swift in Sources */,
 				6175A0A9225272390008F1F7 /* CreateThreadViewController.swift in Sources */,
 				6118ABBA224D711A002EA34C /* SignUpViewController.swift in Sources */,

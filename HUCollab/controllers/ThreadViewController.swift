@@ -71,7 +71,7 @@ class ThreadViewController: UIViewController, UITableViewDelegate {
     }
     
     /* Tableview delegate methods */
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    /*func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
@@ -81,6 +81,6 @@ class ThreadViewController: UIViewController, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         <#code#>
-    }
+    }*/
     
 }
