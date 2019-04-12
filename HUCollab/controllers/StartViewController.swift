@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+/* The beginning page of the app where you choose to either sign in or sign up */
 class StartViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {

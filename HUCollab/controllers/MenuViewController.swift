@@ -14,6 +14,7 @@ enum MenuType: Int {
     case signout
 }
 
+/* view controller for displaying side menu */
 class MenuViewController: UITableViewController {
     
     var didTapMenuType: ((MenuType) -> Void)?

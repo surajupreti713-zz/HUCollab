@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+/* This view controller acts as a homepage and contains posts of threads that you are subscribed to */
 class HomeViewController: UIViewController {
     
     let transition = SlideInTransition()
