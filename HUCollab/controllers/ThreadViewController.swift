@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 
-class ThreadViewController: UIViewController {
+/* This view controller contains all the posts of a particular thread */
+class ThreadViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var threadImageView: UIImageView!
     
@@ -36,6 +37,13 @@ class ThreadViewController: UIViewController {
         self.present(navigationController, animated: true, completion: nil)
     }
     
+    @IBAction func addPostClicked(_ sender: UIBarButtonItem) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
+        self.addChild(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParent: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,5 +70,17 @@ class ThreadViewController: UIViewController {
         }
     }
     
+    /* Tableview delegate methods */
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
     
 }

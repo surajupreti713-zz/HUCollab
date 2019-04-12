@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+/* View controller for creating threads */
 class CreateThreadViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var threadName: UITextField!
