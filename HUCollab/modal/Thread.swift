@@ -12,7 +12,6 @@ import Firebase
 public class Thread {
     var threadHandle: String?
     var threadDescription: String?
-    //var threadPhotoURL: String?
     var created: String?
     var userEmail: String?
     var userID: String?

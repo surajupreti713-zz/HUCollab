@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h7x-jD-fRJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h7x-jD-fRJ">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -209,7 +209,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Create Thread" id="ZRd-gJ-tlu">
                             <connections>
-                                <segue destination="qKU-Fb-ePZ" kind="show" id="hCp-ek-VZY"/>
+                                <segue destination="qKU-Fb-ePZ" kind="show" identifier="threadSeg" id="hCp-ek-VZY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -222,10 +222,10 @@
             </objects>
             <point key="canvasLocation" x="2868.115942028986" y="193.52678571428569"/>
         </scene>
-        <!--Create Thread View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Lb0-Ef-MBV">
             <objects>
-                <viewController id="qKU-Fb-ePZ" customClass="CreateThreadViewController" customModule="HUCollab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qKU-Fb-ePZ" customClass="HomeViewController" customModule="HUCollab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ETa-Ug-giZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,7 +234,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thread Handle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yw-Ss-ZRK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thread Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yw-Ss-ZRK">
                                         <rect key="frame" x="24" y="67" width="113" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -287,7 +287,8 @@
                                         </state>
                                         <connections>
                                             <action selector="tapToCreateThread:" destination="qKU-Fb-ePZ" eventType="touchUpInside" id="7Jc-JZ-sQ0"/>
-                                            <segue destination="mbf-DA-azb" kind="showDetail" id="L0i-Ro-dMJ"/>
+                                            <action selector="uploadThread:" destination="qKU-Fb-ePZ" eventType="touchUpInside" id="zwx-eh-Z6p"/>
+                                            <segue destination="mbf-DA-azb" kind="showDetail" identifier="goToPosts" id="L0i-Ro-dMJ"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYZ-8O-2ap">
@@ -302,9 +303,10 @@
                         <viewLayoutGuide key="safeArea" id="rk3-dk-WtH"/>
                     </view>
                     <connections>
+                        <outlet property="threadDesc" destination="hu0-Cp-Yau" id="fCl-gL-qRu"/>
                         <outlet property="threadDescription" destination="hu0-Cp-Yau" id="yEE-bd-7l7"/>
                         <outlet property="threadImageView" destination="dYZ-8O-2ap" id="6vm-aS-vsY"/>
-                        <outlet property="threadName" destination="vSo-4l-7Kg" id="p5Q-DC-vVO"/>
+                        <outlet property="threadName" destination="vSo-4l-7Kg" id="bEk-8P-tCq"/>
                         <outlet property="uploadButton" destination="FRd-2K-sdO" id="iNa-SF-aga"/>
                     </connections>
                 </viewController>
@@ -464,8 +466,8 @@
                                                         <constraint firstAttribute="height" constant="24" id="o10-bT-Ji5"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fG-MN-QJK">
-                                                    <rect key="frame" x="56" y="26" width="52.5" height="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fG-MN-QJK">
+                                                    <rect key="frame" x="56" y="26" width="94" height="25"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -488,6 +490,9 @@
                                                 <constraint firstItem="hCT-YQ-lgP" firstAttribute="leading" secondItem="ypd-hK-wGa" secondAttribute="leading" constant="16" id="ykS-4I-1e3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2cq-Vf-bLR" kind="presentation" id="RXz-z7-XRp"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="TkC-Rp-cdq">
                                         <rect key="frame" x="0.0" y="189" width="414" height="77"/>
@@ -536,10 +541,11 @@
                             <outlet property="delegate" destination="Ozc-Z5-pXe" id="bIH-mJ-4eD"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="IWt-3T-ZuJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sg3-As-U3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868" y="907"/>
+            <point key="canvasLocation" x="4686.9565217391309" y="906.69642857142856"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="TWr-9A-So7">
@@ -724,7 +730,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYh-HL-sBW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="392"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="392"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEO-Xl-Ol3">
@@ -764,6 +770,14 @@
                                             <action selector="tapToPost:" destination="2cq-Vf-bLR" eventType="touchUpInside" id="0xP-hC-Yyj"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiR-DQ-xXd">
+                                        <rect key="frame" x="8" y="8" width="63" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="onCancelClicked:" destination="2cq-Vf-bLR" eventType="touchUpInside" id="xRx-sp-bgJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.59162892060000005" green="0.80731790859999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -780,7 +794,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mq0-LV-jI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5633" y="27"/>
+            <point key="canvasLocation" x="5757.971014492754" y="906.69642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S87-SB-5Xt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwv-Hs-XJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vus-DL-Ms0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="s80-VC-BpV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vJ5-8y-zic">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ozc-Z5-pXe" kind="relationship" relationship="rootViewController" id="qx3-CF-lRb"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="3738" y="907"/>
         </scene>
     </scenes>
     <resources>
@@ -788,13 +821,13 @@
         <image name="home" width="24" height="24"/>
         <image name="like" width="24" height="24"/>
         <image name="menu" width="24" height="24"/>
-        <image name="notification" width="64" height="64"/>
+        <image name="notification" width="48" height="48"/>
         <image name="profile" width="24" height="24"/>
         <image name="share" width="14" height="14"/>
-        <image name="signout" width="48" height="48"/>
-        <image name="upload" width="50" height="50"/>
+        <image name="signout" width="36" height="36"/>
+        <image name="upload" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Wq4-xB-dJP"/>
+        <segue reference="oBC-HU-LrI"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,16 +8,19 @@
 
 import UIKit
 import Firebase
-
 /* This view controller acts as a homepage and contains posts of threads that you are subscribed to */
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     
     let transition = SlideInTransition()
     var topView: UIView?
     var posts: [Post]?
     
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +53,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         topView?.removeFromSuperview()
         switch menuType {
-        case .profile:
+        case .createPost:
+            
             let view = UIView()
             view.backgroundColor = .yellow
             view.frame = self.view.bounds
